@@ -1,8 +1,11 @@
-from Window_Class import Window  # Import the Window class
+from graphics import Window, Line, Point
+
 
 def main():
-    win = Window(800, 600)  # Create a window of 800x600 pixels
-    win.wait_for_close()  # Keep it open until the user closes it
+    win = Window(800, 600)
+    l = Line(Point(50, 50), Point(400, 400))
+    win.draw_line(l, "black")
+    win.wait_for_close()
 
-if __name__ == "__main__":
-    main()  # Run the main function
+
+main()
